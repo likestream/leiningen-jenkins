@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.likestream.clojure.plugin</groupId>
-    <artifactId>clojure</artifactId>
+    <artifactId>leiningen</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>hpi</packaging>
