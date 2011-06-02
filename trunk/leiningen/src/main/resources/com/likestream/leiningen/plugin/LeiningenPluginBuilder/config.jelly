@@ -1,0 +1,25 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <f:entry title="Leiningen Version">
+	    <select class="setting-input" name="leiningen.leiningenInstallation">
+	      <option>(Default)</option>
+	      <j:forEach var="inst" items="${descriptor.installations}">
+	        <f:option selected="${inst.name}">${inst.name}</f:option>
+	      </j:forEach>
+	    </select>
+  </f:entry>
+  <f:entry title="Tasks" description=" Specify Leiningen task(s) to run.">
+    	<f:expandableTextbox name="leiningen.tasks" value="${instance.tasks}" />
+  </f:entry>
+  
+  <f:advanced>
+  	
+    <f:entry title="Leiningen lib directory" description="Specify the Leiningen lib directory">
+      	<f:textbox name="leiningen.leiningenLibDir" value="${instance.leiningenLibDir}"/>
+    </f:entry>
+    <f:entry title="Leiningen working directory" description="Specify the Leiningen working directory, by default it's '.'">
+      	<f:textbox name="leiningen.leiningenWorkingDir" value="${instance.leiningenWorkingDir}"/>
+    </f:entry>
+    
+  </f:advanced>
+  	
+</j:jelly>
