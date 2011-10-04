@@ -1,20 +1,30 @@
-
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>1.433</version><!-- which version of Jenkins is this plugin built against? -->
+  </parent>
 
-    <parent>
-        <groupId>org.jvnet.hudson.plugins</groupId>
-        <artifactId>hudson-plugin-parent</artifactId>
-        <version>1.398</version><!-- which version of Hudson is this plugin built against? -->
-    </parent>
+  <groupId>com.likestream.leiningen</groupId>
+  <artifactId>leiningen</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>hpi</packaging>
 
-    <groupId>com.likestream.clojure.plugin</groupId>
-    <artifactId>leiningen</artifactId>
-    <version>1.0-SNAPSHOT</version>
+  <name>Leiningen Plugin</name>
+  
+  <!-- get every artifact through maven.glassfish.org, which proxies all the artifacts that we need -->
+  <repositories>
+    <repository>
+      <id>m.g.o-public</id>
+      <url>http://maven.glassfish.org/content/groups/public/</url>
+    </repository>
+  </repositories>
 
-    <packaging>hpi</packaging>
-
-    <name>Leiningen Plugin</name>
-
+  <pluginRepositories>
+    <pluginRepository>
+      <id>m.g.o-public</id>
+      <url>http://maven.glassfish.org/content/groups/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
