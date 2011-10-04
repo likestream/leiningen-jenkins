@@ -1,4 +1,4 @@
-package com.likestream.leiningen.plugin;
+package com.likestream.leiningen;
 
 import hudson.CopyOnWrite;
 import hudson.Launcher;
@@ -34,7 +34,7 @@ import java.io.IOException;
  * 
  * @author Ramakrishna Sharvirala
  */
-public class LeiningenPluginBuilder extends Builder {
+public class LeiningenBuilder extends Builder {
 
 	
 	
@@ -47,7 +47,7 @@ public class LeiningenPluginBuilder extends Builder {
 	// Fields in config.jelly must match the parameter names in the
 	// "DataBoundConstructor"
 	@DataBoundConstructor
-	public LeiningenPluginBuilder(String leiningenInstallation, String tasks, String leiningenLibDir, String leiningenWorkingDir) {
+	public LeiningenBuilder(String leiningenInstallation, String tasks, String leiningenLibDir, String leiningenWorkingDir) {
 		this.leiningenInstallation = leiningenInstallation;
 		this.tasks = tasks;
 		this.leiningenLibDir = leiningenLibDir;

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.likestream.leiningen.plugin;
+package com.likestream.leiningen;
 
 import java.io.File;
 import java.io.IOException;
